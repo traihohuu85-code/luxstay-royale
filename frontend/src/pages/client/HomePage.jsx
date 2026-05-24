@@ -42,8 +42,7 @@ export default function HomePage() {
         <div className="container-lux relative grid min-h-[780px] items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-amber-300/25 bg-amber-300/10 px-4 py-2 text-sm font-black text-amber-100 backdrop-blur-xl"><Crown size={18} fill="currentColor" />Luxury merged edition</div>
-            <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-7xl">Trải nghiệm đặt phòng khách sạn sang trọng, mượt mà và tinh tế.</h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300">LuxStay Royale gộp điểm mạnh của hai phiên bản: giao diện resort 5 sao, hệ thống đa cơ sở, đặt phòng trực quan, thanh toán giả lập và admin quản trị đầy đủ.</p>
+            <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-7xl">Trải nghiệm đặt phòng khách sạn sang trọng, mượt mà và tinh tế.</h1>            
             <div className="mt-9 flex flex-col gap-4 sm:flex-row"><Link to="/rooms" className="btn-primary">Khám phá phòng <ArrowRight size={18} /></Link><Link to="/branches" className="btn-secondary">Xem cơ sở</Link></div>
             <div className="mt-12 grid max-w-2xl gap-4 sm:grid-cols-3">
               {[['6+', 'Cơ sở nổi bật'], [rooms.length || '17+', 'Phòng cao cấp'], ['24/7', 'Hỗ trợ booking']].map(([value, label]) => <div key={label} className="glass-panel p-5"><p className="font-display text-3xl font-bold text-amber-200">{value}</p><p className="mt-1 text-sm text-slate-400">{label}</p></div>)}
@@ -67,7 +66,7 @@ export default function HomePage() {
       </section>
 
       <section className="container-lux py-16">
-        
+
       </section>
 
       <section className="container-lux py-10">
