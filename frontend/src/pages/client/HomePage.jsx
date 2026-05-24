@@ -43,7 +43,6 @@ export default function HomePage() {
           <div>
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-amber-300/25 bg-amber-300/10 px-4 py-2 text-sm font-black text-amber-100 backdrop-blur-xl"><Crown size={18} fill="currentColor" />Luxury merged edition</div>
             <h1 className="font-display text-5xl font-semibold leading-[0.92] tracking-[-0.03em] text-white md:text-7xl">Trải nghiệm đỉnh cao của sự sang trọng và tiện nghi</h1>
-            <p className="mt-4 max-w-xl text-lg text-slate-300">Khám phá bộ sưu tập phòng cao cấp và dịch vụ đẳng cấp thế giới tại LuxStay Royale - điểm đến lý tưởng cho kỳ nghỉ sang trọng của bạn.</p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row"><Link to="/rooms" className="btn-primary">Khám phá phòng <ArrowRight size={18} /></Link><Link to="/branches" className="btn-secondary">Xem cơ sở</Link></div>
             <div className="mt-12 grid max-w-2xl gap-4 sm:grid-cols-3">
               {[['6+', 'Cơ sở nổi bật'], [rooms.length || '17+', 'Phòng cao cấp'], ['24/7', 'Hỗ trợ booking']].map(([value, label]) => <div key={label} className="glass-panel p-5"><p className="font-display text-3xl font-bold text-amber-200">{value}</p><p className="mt-1 text-sm text-slate-400">{label}</p></div>)}
