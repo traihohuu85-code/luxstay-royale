@@ -7,6 +7,10 @@ export default {
         display: ['Playfair Display', 'Georgia', 'serif'],
         body: ['Inter', 'ui-sans-serif', 'system-ui']
       },
+      fontFamily: {
+        display: ['"Cormorant Garamond"', 'serif'],
+        sans: ['Manrope', 'sans-serif'],
+      },
       boxShadow: {
         luxury: '0 28px 90px rgba(0, 0, 0, 0.32)',
         gold: '0 18px 55px rgba(245, 158, 11, 0.28)',
