@@ -1,4 +1,4 @@
-import { Crown, MapPin, Phone, Mail } from 'lucide-react';
+import { Crown, MapPin, Phone, Mail, Sparkles } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
