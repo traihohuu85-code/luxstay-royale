@@ -46,7 +46,7 @@ export default function AdminDashboardPage() {
     ['Phòng', data.rooms, '🛏️'],
     ['Người dùng', data.users, '👥'],
     ['Đơn chờ', data.pendingBookings, '⏳'],
-    ['Doanh thu', formatCurrency(data.revenue), '💰'],
+    ['Doanh thu đã checkout', formatCurrency(data.revenue), '💰']
   ];
 
   return (

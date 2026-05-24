@@ -34,7 +34,9 @@ app.use(express.json({ limit: '2mb' }));
 app.use(morgan('dev'));
 
 function readDb() {
-  return JSON.parse(fs.readFileSync(DB_PATH, 'utf-8'));
+  const db = JSON.parse(fs.readFileSync(DB_PATH, 'utf-8'));
+  db.reviews = db.reviews || [];
+  return db;
 }
 
 function writeDb(db) {
@@ -113,10 +115,18 @@ function isRoomAvailable(db, roomId, checkInDate, checkOutDate) {
 }
 
 function enrichRoom(db, room) {
+  const roomReviews = (db.reviews || []).filter(review => review.roomId === room.id);
+  const reviewCount = roomReviews.length;
+  const ratingAverage = reviewCount
+    ? Number((roomReviews.reduce((sum, review) => sum + Number(review.rating || 0), 0) / reviewCount).toFixed(1))
+    : 0;
+
   return {
     ...room,
     branch: db.branches.find(branch => branch.id === room.branchId) || null,
-    category: db.categories.find(category => category.id === room.categoryId) || null
+    category: db.categories.find(category => category.id === room.categoryId) || null,
+    reviewCount,
+    ratingAverage
   };
 }
 
@@ -218,6 +228,84 @@ app.get('/api/rooms/:id', (req, res) => {
   res.json(enrichRoom(db, room));
 });
 
+app.get('/api/rooms/:id/reviews', (req, res) => {
+  const db = readDb();
+  const roomId = Number(req.params.id);
+  const room = db.rooms.find(item => item.id === roomId);
+  if (!room) return res.status(404).json({ message: 'Không tìm thấy phòng.' });
+
+  const reviews = (db.reviews || [])
+    .filter(review => review.roomId === roomId)
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+    .map(review => {
+      const user = db.users.find(item => item.id === review.userId);
+      return {
+        ...review,
+        user: user ? { id: user.id, name: user.name, avatar: user.avatar } : null
+      };
+    });
+
+  res.json(reviews);
+});
+
+app.post('/api/rooms/:id/reviews', authenticate, (req, res) => {
+  const db = readDb();
+  const roomId = Number(req.params.id);
+  const { rating, comment } = req.body;
+  const room = db.rooms.find(item => item.id === roomId);
+
+  if (!room) return res.status(404).json({ message: 'Không tìm thấy phòng.' });
+
+  const numericRating = Number(rating);
+
+  if (!numericRating || numericRating < 1 || numericRating > 5) {
+    return res.status(400).json({ message: 'Vui lòng chọn số sao từ 1 đến 5.' });
+  }
+
+  if (!comment || String(comment).trim().length < 10) {
+    return res.status(400).json({ message: 'Feedback cần tối thiểu 10 ký tự.' });
+  }
+
+  const eligibleBooking = db.bookings.find(booking =>
+    booking.userId === req.user.id &&
+    booking.roomId === roomId &&
+    booking.status === 'checked-out'
+  );
+
+  if (!eligibleBooking) {
+    return res.status(403).json({ message: 'Bạn chỉ có thể đánh giá phòng sau khi đã check-out.' });
+  }
+
+  const existed = (db.reviews || []).find(review =>
+    review.userId === req.user.id &&
+    review.roomId === roomId
+  );
+
+  if (existed) {
+    return res.status(409).json({ message: 'Bạn đã đánh giá phòng này rồi.' });
+  }
+
+  const review = {
+    id: nextId(db.reviews),
+    roomId,
+    userId: req.user.id,
+    bookingId: eligibleBooking.id,
+    rating: numericRating,
+    comment: String(comment).trim(),
+    createdAt: new Date().toISOString()
+  };
+
+  db.reviews.push(review);
+  writeDb(db);
+
+  const user = db.users.find(item => item.id === review.userId);
+
+  res.status(201).json({
+    ...review,
+    user: user ? { id: user.id, name: user.name, avatar: user.avatar } : null
+  });
+});
+
 app.get('/api/bookings/my', authenticate, (req, res) => {
   const db = readDb();
   const bookings = db.bookings
@@ -282,7 +370,7 @@ app.patch('/api/bookings/:id/cancel', authenticate, (req, res) => {
 app.get('/api/admin/dashboard', authenticate, requireAdmin, (req, res) => {
   const db = readDb();
   const revenue = db.bookings
-    .filter(item => item.paymentStatus === 'paid' && item.status !== 'cancelled')
+    .filter(item => item.status === 'checked-out')
     .reduce((sum, item) => sum + Number(item.totalPrice || 0), 0);
   res.json({
     branches: db.branches.length,

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { ArrowLeft, Bath, BedDouble, CalendarDays, CreditCard, MapPin, Maximize2, Phone, UserRound, Users } from 'lucide-react';
+import { ArrowLeft, Bath, BedDouble, CalendarDays, CreditCard, MapPin, Maximize2, MessageCircle, Phone, Star, UserRound, Users } from 'lucide-react';
 import http from '../../api/http';
 import { useAuth } from '../../context/AuthContext';
 import { formatCurrency, nightsBetween } from '../../utils/format';

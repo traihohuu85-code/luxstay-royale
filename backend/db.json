@@ -775,6 +775,34 @@
       "note": "Check-in muộn sau 20h",
       "createdAt": "2026-05-24T00:00:00.000Z",
       "updatedAt": "2026-05-24T11:08:57.067Z"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "roomId": 11,
+      "checkInDate": "2026-05-24",
+      "checkOutDate": "2026-05-31",
+      "nights": 7,
+      "totalPrice": 20109600,
+      "serviceFee": 1489600,
+      "status": "pending",
+      "paymentStatus": "paid",
+      "paymentMethod": "fake_card",
+      "guestName": "Nguyễn Minh Khách",
+      "guestPhone": "0912345678",
+      "note": "",
+      "createdAt": "2026-05-24T16:08:50.837Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "roomId": 1,
+      "userId": 2,
+      "bookingId": 2,
+      "rating": 5,
+      "comment": "Phòng sạch, vị trí đẹp, nhân viên hỗ trợ rất nhiệt tình.",
+      "createdAt": "2026-05-24T12:00:00.000Z"
     }
   ]
 }
