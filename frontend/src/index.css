@@ -71,27 +71,28 @@
 }
   .date-field {
   position: relative;
-  width: 100%;
-  border-radius: 18px;
-  background: rgba(10, 15, 31, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  transition: 0.25s ease;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(15, 23, 42, 0.72);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .date-field:hover {
-  border-color: rgba(250, 204, 21, 0.35);
-  background: rgba(12, 18, 36, 0.96);
+  background: rgba(15, 23, 42, 0.82);
+  border-color: rgba(250, 204, 21, 0.28);
+  transform: none;
 }
 
 .date-field:focus-within {
-  border-color: rgba(250, 204, 21, 0.7);
-  box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.1);
+  background: rgba(15, 23, 42, 0.86);
+  border-color: rgba(250, 204, 21, 0.45);
+  box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.08);
 }
 
 .date-native {
   width: 100%;
-  height: 56px;
+  height: 100%;
+  min-height: 56px;
   border: 0;
   outline: 0;
   background: transparent;
@@ -117,7 +118,7 @@
   right: 18px;
   top: 50%;
   transform: translateY(-50%);
-  color: #fde68a;
+  color: #facc15;
   opacity: 0.9;
 }
 
@@ -128,5 +129,11 @@
 .date-native::-webkit-datetime-edit-text {
   color: #facc15;
   padding: 0 3px;
+}
+
+.date-native::-webkit-datetime-edit-month-field,
+.date-native::-webkit-datetime-edit-day-field,
+.date-native::-webkit-datetime-edit-year-field {
+  color: #f8fafc;
 }
 }
