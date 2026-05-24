@@ -785,13 +785,14 @@
       "nights": 7,
       "totalPrice": 20109600,
       "serviceFee": 1489600,
-      "status": "pending",
+      "status": "checked-out",
       "paymentStatus": "paid",
       "paymentMethod": "fake_card",
       "guestName": "Nguyễn Minh Khách",
       "guestPhone": "0912345678",
       "note": "",
-      "createdAt": "2026-05-24T16:08:50.837Z"
+      "createdAt": "2026-05-24T16:08:50.837Z",
+      "updatedAt": "2026-05-24T16:34:49.853Z"
     }
   ],
   "reviews": [
