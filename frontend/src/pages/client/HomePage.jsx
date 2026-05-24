@@ -69,9 +69,7 @@ export default function HomePage() {
       <section className="container-lux py-16">
         <div className="grid gap-5 md:grid-cols-3">
           {[
-            { icon: Gem, title: 'Giao diện premium', text: 'Bố cục dark luxury, ảnh lớn, glassmorphism và hiệu ứng hover mượt.' },
-            { icon: ShieldCheck, title: 'Logic đặt phòng chắc', text: 'Kiểm tra trùng ngày, tính số đêm, phí dịch vụ và trạng thái thanh toán.' },
-            { icon: Sparkles, title: 'Admin toàn diện', text: 'Quản lý cơ sở, danh mục, phòng, tài khoản và booking với phân quyền JWT.' }
+            
           ].map((item) => <div key={item.title} className="card-lux p-6"><div className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-amber-300/15 text-amber-200"><item.icon /></div><h3 className="text-xl font-black text-white">{item.title}</h3><p className="mt-2 text-sm leading-6 text-slate-400">{item.text}</p></div>)}
         </div>
       </section>
