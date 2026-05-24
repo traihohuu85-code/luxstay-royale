@@ -1,0 +1,18 @@
+{
+  "name": "luxstay-merged-premium",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Merged luxury hotel booking project - React Tailwind frontend + Express backend",
+  "scripts": {
+    "postinstall": "npm install --prefix backend --no-audit --no-fund && npm install --prefix frontend --no-audit --no-fund",
+    "install:all": "npm install --prefix backend --no-audit --no-fund && npm install --prefix frontend --no-audit --no-fund",
+    "start": "concurrently -k -n BACKEND,FRONTEND -c green,cyan \"npm start --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "start:backend": "npm start --prefix backend",
+    "build:frontend": "npm run build --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

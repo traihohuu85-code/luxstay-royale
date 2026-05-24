@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { scroll-behavior: smooth; }
+  body {
+    @apply min-h-screen bg-slate-950 font-body text-slate-100 antialiased;
+    background:
+      radial-gradient(circle at 8% 8%, rgba(245, 158, 11, 0.14), transparent 28%),
+      radial-gradient(circle at 92% 3%, rgba(16, 185, 129, 0.16), transparent 24%),
+      radial-gradient(circle at 52% 92%, rgba(99, 102, 241, 0.12), transparent 26%),
+      #020617;
+  }
+  ::selection { @apply bg-amber-300 text-slate-950; }
+}
+
+@layer components {
+  .container-lux { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .section-title { @apply font-display text-4xl font-bold tracking-tight text-white md:text-5xl; }
+  .section-kicker { @apply text-sm font-black uppercase tracking-[0.35em] text-amber-200; }
+  .glass-panel { @apply rounded-[2rem] border border-white/10 bg-white/[0.075] shadow-luxury backdrop-blur-2xl; }
+  .card-lux { @apply rounded-[2rem] border border-white/10 bg-white/[0.075] shadow-luxury backdrop-blur-2xl transition-all duration-300; }
+  .card-lux:hover { @apply -translate-y-1 border-amber-300/30 bg-white/[0.095]; }
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient px-6 py-3 text-sm font-black text-slate-950 shadow-gold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-2xl disabled:cursor-not-allowed disabled:opacity-60; }
+  .btn-secondary { @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-bold text-white shadow-soft backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-amber-300/60 hover:bg-amber-300/10 hover:text-amber-100; }
+  .btn-danger { @apply inline-flex items-center justify-center rounded-xl bg-red-500/15 px-4 py-2 text-sm font-bold text-red-200 transition hover:bg-red-500/25; }
+  .client-input { @apply w-full rounded-2xl border border-white/10 bg-slate-950/65 px-4 py-3 text-sm text-white outline-none transition-all duration-300 placeholder:text-slate-500 focus:border-amber-300/70 focus:ring-4 focus:ring-amber-400/10; }
+  .admin-input { @apply w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition-all duration-300 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100; }
+  .input-light { @apply w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100; }
+  .label-lux { @apply mb-2 block text-sm font-bold text-slate-200; }
+  .pill-lux { @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-widest text-slate-200 backdrop-blur-xl; }
+  .table-lux { @apply min-w-full divide-y divide-white/10 overflow-hidden text-left text-sm; }
+  .table-lux th { @apply bg-slate-950/80 px-4 py-4 text-xs font-black uppercase tracking-widest text-amber-200; }
+  .table-lux td { @apply border-t border-white/10 px-4 py-4 text-slate-200 align-middle; }
+}

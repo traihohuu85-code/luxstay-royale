@@ -1,0 +1,13 @@
+import { useEffect, useState } from 'react';
+import http from '../../api/http';
+import Modal from '../../components/common/Modal';
+
+const empty = { name: '', city: '', address: '', phone: '', email: '', image: '', description: '', rating: 4.8 };
+export default function AdminBranchesPage() {
+  const [items, setItems] = useState([]); const [open, setOpen] = useState(false); const [form, setForm] = useState(empty); const [editing, setEditing] = useState(null); const [message, setMessage] = useState('');
+  const load = () => http.get('/admin/branches').then((r) => setItems(r.data)); useEffect(() => { load(); }, []);
+  const save = async (e) => { e.preventDefault(); try { editing ? await http.put(`/admin/branches/${editing}`, form) : await http.post('/admin/branches', form); setOpen(false); setEditing(null); setForm(empty); load(); } catch (err) { setMessage(err.message); } };
+  const remove = async (id) => { if (!confirm('Xóa cơ sở này?')) return; try { await http.delete(`/admin/branches/${id}`); load(); } catch (err) { setMessage(err.message); } };
+  return <div><Header title="Quản lý cơ sở" onAdd={() => { setForm(empty); setEditing(null); setOpen(true); }} />{message && <p className="mb-4 rounded-2xl bg-red-50 p-3 text-red-600">{message}</p>}<div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">{items.map((item) => <div key={item.id} className="overflow-hidden rounded-3xl bg-white shadow-lg"><img src={item.image} className="h-44 w-full object-cover" /><div className="p-5"><h3 className="text-xl font-black">{item.name}</h3><p className="text-sm text-slate-500">{item.address}</p><div className="mt-4 flex gap-2"><button className="btn-secondary py-2" onClick={() => { setForm(item); setEditing(item.id); setOpen(true); }}>Sửa</button><button className="rounded-2xl bg-red-50 px-4 py-2 font-bold text-red-600" onClick={() => remove(item.id)}>Xóa</button></div></div></div>)}</div><Modal open={open} title={editing ? 'Sửa cơ sở' : 'Thêm cơ sở'} onClose={() => setOpen(false)}><form onSubmit={save} className="grid gap-4 md:grid-cols-2">{['name','city','address','phone','email','image','description','rating'].map((key) => <label key={key} className="text-sm font-bold capitalize">{key}<input className="admin-input mt-2" value={form[key] || ''} onChange={(e) => setForm({ ...form, [key]: key==='rating' ? Number(e.target.value) : e.target.value })} /></label>)}<button className="btn-primary md:col-span-2">Lưu</button></form></Modal></div>;
+}
+function Header({ title, onAdd }) { return <div className="mb-6 flex items-center justify-between"><h1 className="text-3xl font-black">{title}</h1><button onClick={onAdd} className="btn-primary">+ Thêm</button></div>; }

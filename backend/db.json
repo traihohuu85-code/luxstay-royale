@@ -1,0 +1,780 @@
+{
+  "branches": [
+    {
+      "id": 1,
+      "name": "LuxStay Grand Hà Nội",
+      "city": "Hà Nội",
+      "address": "15 Tràng Tiền, Hoàn Kiếm, Hà Nội",
+      "phone": "024 8888 0001",
+      "email": "hanoi@luxstay.vn",
+      "image": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
+      "description": "Cơ sở trung tâm thủ đô, gần hồ Hoàn Kiếm, phù hợp nghỉ dưỡng và công tác.",
+      "rating": 4.9
+    },
+    {
+      "id": 2,
+      "name": "LuxStay Grand Đà Nẵng",
+      "city": "Đà Nẵng",
+      "address": "88 Võ Nguyên Giáp, Sơn Trà, Đà Nẵng",
+      "phone": "0236 8888 0002",
+      "email": "danang@luxstay.vn",
+      "image": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=1200&q=80",
+      "description": "Resort biển hiện đại nhìn ra Mỹ Khê, có hồ bơi vô cực và lounge cao cấp.",
+      "rating": 4.8
+    },
+    {
+      "id": 3,
+      "name": "LuxStay Grand Nha Trang",
+      "city": "Khánh Hòa",
+      "address": "22 Trần Phú, Nha Trang, Khánh Hòa",
+      "phone": "0258 8888 0003",
+      "email": "nhatrang@luxstay.vn",
+      "image": "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80",
+      "description": "Không gian nghỉ dưỡng biển sang trọng, gần bãi tắm và quảng trường trung tâm.",
+      "rating": 4.7
+    },
+    {
+      "id": 4,
+      "name": "LuxStay Grand Sài Gòn",
+      "city": "TP. Hồ Chí Minh",
+      "address": "68 Đồng Khởi, Quận 1, TP. Hồ Chí Minh",
+      "phone": "028 8888 0004",
+      "email": "saigon@luxstay.vn",
+      "image": "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?auto=format&fit=crop&w=1200&q=80",
+      "description": "Khách sạn business luxury giữa trung tâm tài chính, tiện di chuyển và hội họp.",
+      "rating": 4.8
+    },
+    {
+      "id": 5,
+      "name": "LuxStay Royale Sapa Retreat",
+      "city": "Lào Cai",
+      "address": "Đường Fansipan, thị xã Sapa, Lào Cai",
+      "phone": "0214 8888 0005",
+      "email": "sapa@luxstay.vn",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=85",
+      "description": "Khu nghỉ dưỡng trên núi, view thung lũng và ruộng bậc thang, phù hợp kỳ nghỉ yên tĩnh.",
+      "rating": 4.8
+    },
+    {
+      "id": 6,
+      "name": "LuxStay Royale Phú Quốc Pearl",
+      "city": "Kiên Giang",
+      "address": "Bãi Trường, Dương Tơ, Phú Quốc",
+      "phone": "0297 8888 0006",
+      "email": "phuquoc@luxstay.vn",
+      "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1400&q=85",
+      "description": "Resort biển cao cấp với hồ bơi vô cực, villa nhiệt đới và bãi biển riêng.",
+      "rating": 4.9
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Standard",
+      "description": "Phòng tiêu chuẩn tinh tế, đầy đủ tiện nghi cơ bản.",
+      "icon": "🛏️"
+    },
+    {
+      "id": 2,
+      "name": "Deluxe",
+      "description": "Không gian rộng, nội thất cao cấp, view thành phố hoặc biển.",
+      "icon": "🌆"
+    },
+    {
+      "id": 3,
+      "name": "Suite",
+      "description": "Phòng hạng sang có khu tiếp khách riêng, phù hợp nghỉ dưỡng dài ngày.",
+      "icon": "👑"
+    },
+    {
+      "id": 4,
+      "name": "Family",
+      "description": "Phòng gia đình rộng rãi, tối ưu cho nhóm 3-5 người.",
+      "icon": "👨‍👩‍👧‍👦"
+    },
+    {
+      "id": 5,
+      "name": "Presidential",
+      "description": "Không gian cao cấp nhất với dịch vụ VIP và tiện nghi đặc biệt.",
+      "icon": "💎"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "branchId": 1,
+      "categoryId": 1,
+      "roomNumber": "1101",
+      "name": "Standard Hà Nội",
+      "price": 970000,
+      "capacity": 2,
+      "area": 40,
+      "bedType": "King bed",
+      "status": "available",
+      "description": "Phòng Standard tại LuxStay Grand Hà Nội mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Két an toàn"
+      ],
+      "featured": false
+    },
+    {
+      "id": 2,
+      "branchId": 1,
+      "categoryId": 2,
+      "roomNumber": "1202",
+      "name": "Deluxe Hà Nội",
+      "price": 1470000,
+      "capacity": 2,
+      "area": 52,
+      "bedType": "King bed",
+      "status": "available",
+      "description": "Phòng Deluxe tại LuxStay Grand Hà Nội mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Két an toàn",
+        "Máy sấy tóc"
+      ],
+      "featured": true
+    },
+    {
+      "id": 3,
+      "branchId": 1,
+      "categoryId": 3,
+      "roomNumber": "1303",
+      "name": "Suite Hà Nội",
+      "price": 2420000,
+      "capacity": 2,
+      "area": 64,
+      "bedType": "King bed",
+      "status": "available",
+      "description": "Phòng Suite tại LuxStay Grand Hà Nội mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm"
+      ],
+      "featured": true
+    },
+    {
+      "id": 4,
+      "branchId": 1,
+      "categoryId": 4,
+      "roomNumber": "1404",
+      "name": "Family Hà Nội",
+      "price": 1870000,
+      "capacity": 4,
+      "area": 76,
+      "bedType": "2 Queen beds",
+      "status": "available",
+      "description": "Phòng Family tại LuxStay Grand Hà Nội mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Két an toàn"
+      ],
+      "featured": false
+    },
+    {
+      "id": 5,
+      "branchId": 2,
+      "categoryId": 1,
+      "roomNumber": "2105",
+      "name": "Standard Đà Nẵng",
+      "price": 1090000,
+      "capacity": 2,
+      "area": 40,
+      "bedType": "King bed",
+      "status": "available",
+      "description": "Phòng Standard tại LuxStay Grand Đà Nẵng mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Két an toàn"
+      ],
+      "featured": false
+    },
+    {
+      "id": 6,
+      "branchId": 2,
+      "categoryId": 2,
+      "roomNumber": "2206",
+      "name": "Deluxe Đà Nẵng",
+      "price": 1590000,
+      "capacity": 2,
+      "area": 52,
+      "bedType": "King bed",
+      "status": "available",
+      "description": "Phòng Deluxe tại LuxStay Grand Đà Nẵng mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Két an toàn",
+        "Máy sấy tóc"
+      ],
+      "featured": true
+    },
+    {
+      "id": 7,
+      "branchId": 2,
+      "categoryId": 3,
+      "roomNumber": "2307",
+      "name": "Suite Đà Nẵng",
+      "price": 2540000,
+      "capacity": 2,
+      "area": 64,
+      "bedType": "King bed",
+      "status": "available",
+      "description": "Phòng Suite tại LuxStay Grand Đà Nẵng mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm"
+      ],
+      "featured": true
+    },
+    {
+      "id": 8,
+      "branchId": 2,
+      "categoryId": 4,
+      "roomNumber": "2408",
+      "name": "Family Đà Nẵng",
+      "price": 1990000,
+      "capacity": 4,
+      "area": 76,
+      "bedType": "2 Queen beds",
+      "status": "available",
+      "description": "Phòng Family tại LuxStay Grand Đà Nẵng mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Két an toàn"
+      ],
+      "featured": false
+    },
+    {
+      "id": 9,
+      "branchId": 3,
+      "categoryId": 1,
+      "roomNumber": "3109",
+      "name": "Standard Khánh Hòa",
+      "price": 1210000,
+      "capacity": 2,
+      "area": 40,
+      "bedType": "King bed",
+      "status": "available",
+      "description": "Phòng Standard tại LuxStay Grand Nha Trang mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Két an toàn"
+      ],
+      "featured": false
+    },
+    {
+      "id": 10,
+      "branchId": 3,
+      "categoryId": 2,
+      "roomNumber": "3200",
+      "name": "Deluxe Khánh Hòa",
+      "price": 1710000,
+      "capacity": 2,
+      "area": 52,
+      "bedType": "King bed",
+      "status": "available",
+      "description": "Phòng Deluxe tại LuxStay Grand Nha Trang mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Két an toàn",
+        "Máy sấy tóc"
+      ],
+      "featured": true
+    },
+    {
+      "id": 11,
+      "branchId": 3,
+      "categoryId": 3,
+      "roomNumber": "3301",
+      "name": "Suite Khánh Hòa",
+      "price": 2660000,
+      "capacity": 2,
+      "area": 64,
+      "bedType": "King bed",
+      "status": "available",
+      "description": "Phòng Suite tại LuxStay Grand Nha Trang mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm"
+      ],
+      "featured": true
+    },
+    {
+      "id": 12,
+      "branchId": 3,
+      "categoryId": 4,
+      "roomNumber": "3402",
+      "name": "Family Khánh Hòa",
+      "price": 2110000,
+      "capacity": 4,
+      "area": 76,
+      "bedType": "2 Queen beds",
+      "status": "available",
+      "description": "Phòng Family tại LuxStay Grand Nha Trang mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Két an toàn"
+      ],
+      "featured": false
+    },
+    {
+      "id": 13,
+      "branchId": 4,
+      "categoryId": 1,
+      "roomNumber": "4103",
+      "name": "Standard TP. Hồ Chí Minh",
+      "price": 1330000,
+      "capacity": 2,
+      "area": 40,
+      "bedType": "King bed",
+      "status": "available",
+      "description": "Phòng Standard tại LuxStay Grand Sài Gòn mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Két an toàn"
+      ],
+      "featured": false
+    },
+    {
+      "id": 14,
+      "branchId": 4,
+      "categoryId": 2,
+      "roomNumber": "4204",
+      "name": "Deluxe TP. Hồ Chí Minh",
+      "price": 1830000,
+      "capacity": 2,
+      "area": 52,
+      "bedType": "King bed",
+      "status": "available",
+      "description": "Phòng Deluxe tại LuxStay Grand Sài Gòn mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Két an toàn",
+        "Máy sấy tóc"
+      ],
+      "featured": true
+    },
+    {
+      "id": 15,
+      "branchId": 4,
+      "categoryId": 3,
+      "roomNumber": "4305",
+      "name": "Suite TP. Hồ Chí Minh",
+      "price": 2780000,
+      "capacity": 2,
+      "area": 64,
+      "bedType": "King bed",
+      "status": "available",
+      "description": "Phòng Suite tại LuxStay Grand Sài Gòn mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm"
+      ],
+      "featured": true
+    },
+    {
+      "id": 16,
+      "branchId": 4,
+      "categoryId": 4,
+      "roomNumber": "4406",
+      "name": "Family TP. Hồ Chí Minh",
+      "price": 2230000,
+      "capacity": 4,
+      "area": 76,
+      "bedType": "2 Queen beds",
+      "status": "available",
+      "description": "Phòng Family tại LuxStay Grand Sài Gòn mang phong cách luxury modern, nội thất tinh tế, ánh sáng ấm và dịch vụ chuẩn khách sạn 5 sao.",
+      "images": [
+        "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Két an toàn"
+      ],
+      "featured": false
+    },
+    {
+      "id": 17,
+      "branchId": 2,
+      "categoryId": 5,
+      "roomNumber": "VIP-01",
+      "name": "Presidential Ocean Villa",
+      "price": 8900000,
+      "capacity": 4,
+      "area": 168,
+      "bedType": "2 King beds",
+      "status": "available",
+      "description": "Biệt thự tổng thống hướng biển, phòng khách riêng, bàn ăn riêng, ban công lớn và dịch vụ quản gia VIP.",
+      "images": [
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "amenities": [
+        "Butler service",
+        "Private pool",
+        "Wifi tốc độ cao",
+        "Minibar",
+        "Bồn tắm",
+        "Ocean view",
+        "Breakfast included"
+      ],
+      "featured": true
+    },
+    {
+      "id": 18,
+      "branchId": 5,
+      "categoryId": 1,
+      "roomNumber": "5101",
+      "name": "Sapa Cloud Standard",
+      "price": 950000,
+      "capacity": 2,
+      "area": 36,
+      "bedType": "Queen bed",
+      "status": "available",
+      "description": "Phòng Standard giữa mây núi Sapa, nội thất gỗ ấm áp, ban công hướng thung lũng.",
+      "images": [
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=85",
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=85",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1400&q=85"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Dịch vụ phòng",
+        "View núi",
+        "Ban công riêng"
+      ],
+      "featured": true
+    },
+    {
+      "id": 19,
+      "branchId": 5,
+      "categoryId": 2,
+      "roomNumber": "5202",
+      "name": "Sapa Mountain Deluxe",
+      "price": 2100000,
+      "capacity": 3,
+      "area": 48,
+      "bedType": "King bed",
+      "status": "available",
+      "description": "Phòng Deluxe view núi, phù hợp cặp đôi hoặc gia đình nhỏ muốn tận hưởng không khí trong lành.",
+      "images": [
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1400&q=85",
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=85",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1400&q=85"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Dịch vụ phòng",
+        "View núi",
+        "Ban công riêng"
+      ],
+      "featured": true
+    },
+    {
+      "id": 20,
+      "branchId": 5,
+      "categoryId": 3,
+      "roomNumber": "5303",
+      "name": "Sapa Imperial Valley Suite",
+      "price": 3900000,
+      "capacity": 4,
+      "area": 78,
+      "bedType": "King bed + sofa",
+      "status": "available",
+      "description": "Suite cao cấp với phòng khách riêng, lò sưởi trang trí và view thung lũng.",
+      "images": [
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=85",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1400&q=85"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Dịch vụ phòng",
+        "View núi",
+        "Ban công riêng"
+      ],
+      "featured": false
+    },
+    {
+      "id": 21,
+      "branchId": 6,
+      "categoryId": 1,
+      "roomNumber": "6101",
+      "name": "Phú Quốc Garden Standard",
+      "price": 1450000,
+      "capacity": 2,
+      "area": 42,
+      "bedType": "Queen bed",
+      "status": "available",
+      "description": "Không gian vườn nhiệt đới, lối đi riêng ra hồ bơi và phong cách coastal luxury.",
+      "images": [
+        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=85",
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=85",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1400&q=85"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Dịch vụ phòng",
+        "View biển",
+        "Bãi biển riêng"
+      ],
+      "featured": false
+    },
+    {
+      "id": 22,
+      "branchId": 6,
+      "categoryId": 2,
+      "roomNumber": "6202",
+      "name": "Phú Quốc Ocean Deluxe",
+      "price": 2850000,
+      "capacity": 3,
+      "area": 56,
+      "bedType": "King bed",
+      "status": "available",
+      "description": "Phòng Deluxe hướng biển, ánh sáng tự nhiên, ban công riêng và nội thất mây tre cao cấp.",
+      "images": [
+        "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1400&q=85",
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=85",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1400&q=85"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Dịch vụ phòng",
+        "View biển",
+        "Bãi biển riêng"
+      ],
+      "featured": true
+    },
+    {
+      "id": 23,
+      "branchId": 6,
+      "categoryId": 5,
+      "roomNumber": "6601",
+      "name": "Phú Quốc Pearl Presidential Suite",
+      "price": 6200000,
+      "capacity": 5,
+      "area": 128,
+      "bedType": "King bed + twin bed",
+      "status": "available",
+      "description": "Hạng phòng đỉnh cao với phòng khách, bồn tắm view biển, dịch vụ VIP và hồ bơi riêng.",
+      "images": [
+        "https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=1400&q=85",
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=85",
+        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1400&q=85"
+      ],
+      "amenities": [
+        "Wifi tốc độ cao",
+        "Điều hòa",
+        "TV 55 inch",
+        "Minibar",
+        "Bồn tắm",
+        "Dịch vụ phòng",
+        "View biển",
+        "Bãi biển riêng"
+      ],
+      "featured": true
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Quản trị viên",
+      "email": "admin@luxstay.vn",
+      "password": "$2a$10$rX7CSaXGfJwcZm4RDReWWOKr9REpT2eF7zU2ug/MjFlyayh/6Da0C",
+      "role": "admin",
+      "phone": "0900000001",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Admin",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Nguyễn Minh Khách",
+      "email": "khach@luxstay.vn",
+      "password": "$2a$10$9Iwp0kZHg6nGzpX4e91rcePt1YDMz1n1gRSriKOvt9Btz5Cnz09pq",
+      "role": "client",
+      "phone": "0912345678",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=Khach",
+      "createdAt": "2026-01-02T00:00:00.000Z"
+    }
+  ],
+  "bookings": [
+    {
+      "id": 1,
+      "userId": 2,
+      "roomId": 1,
+      "checkInDate": "2026-06-10",
+      "checkOutDate": "2026-06-12",
+      "nights": 2,
+      "totalPrice": 1900000,
+      "serviceFee": 200000,
+      "status": "cancelled",
+      "paymentStatus": "paid",
+      "paymentMethod": "fake_card",
+      "guestName": "Nguyễn Minh Khách",
+      "guestPhone": "0912345678",
+      "note": "Check-in muộn sau 20h",
+      "createdAt": "2026-05-24T00:00:00.000Z",
+      "updatedAt": "2026-05-24T11:08:57.067Z"
+    }
+  ]
+}
