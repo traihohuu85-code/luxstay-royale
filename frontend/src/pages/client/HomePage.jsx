@@ -67,11 +67,7 @@ export default function HomePage() {
       </section>
 
       <section className="container-lux py-16">
-        <div className="grid gap-5 md:grid-cols-3">
-          {[
-            
-          ].map((item) => <div key={item.title} className="card-lux p-6"><div className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-amber-300/15 text-amber-200"><item.icon /></div><h3 className="text-xl font-black text-white">{item.title}</h3><p className="mt-2 text-sm leading-6 text-slate-400">{item.text}</p></div>)}
-        </div>
+        
       </section>
 
       <section className="container-lux py-10">
