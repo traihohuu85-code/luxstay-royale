@@ -32,6 +32,11 @@ export default function BookingHistoryPage() {
             </div>
             <div className="mt-4 text-left md:mt-0 md:text-right">
               <p className="text-2xl font-black text-amber-100">{formatCurrency(booking.totalPrice)}</p>
+              {booking.paymentStatus === 'refunded' && (
+  <p className="mt-2 text-sm font-bold text-emerald-200">
+    Đã hoàn tiền: {formatCurrency(booking.refundAmount || booking.totalPrice)}
+  </p>
+)}
               {['pending', 'confirmed'].includes(booking.status) && <button onClick={() => cancel(booking.id)} className="mt-4 inline-flex items-center gap-2 rounded-2xl bg-red-500/15 px-4 py-2 text-sm font-bold text-red-100 hover:bg-red-500/25"><XCircle size={16} />Hủy đơn</button>}
             </div>
           </div>

@@ -129,7 +129,23 @@ function enrichRoom(db, room) {
     ratingAverage
   };
 }
+function applyRefundWhenCancelled(booking) {
+  if (booking.status !== 'cancelled') return booking;
 
+  if (booking.paymentStatus === 'paid') {
+    booking.paymentStatus = 'refunded';
+    booking.refundStatus = 'completed';
+    booking.refundAmount = Number(booking.totalPrice || 0);
+    booking.refundedAt = new Date().toISOString();
+    booking.refundNote = 'Đơn đã thanh toán nên hệ thống đã hoàn tiền giả lập khi khách/admin hủy đơn.';
+  } else {
+    booking.refundStatus = 'not_required';
+    booking.refundAmount = 0;
+    booking.refundNote = 'Đơn chưa thanh toán nên không cần hoàn tiền.';
+  }
+
+  return booking;
+}
 function enrichBooking(db, booking) {
   const room = db.rooms.find(item => item.id === booking.roomId);
   const user = db.users.find(item => item.id === booking.userId);
@@ -362,6 +378,10 @@ app.patch('/api/bookings/:id/cancel', authenticate, (req, res) => {
   }
   booking.status = 'cancelled';
   booking.cancelledAt = new Date().toISOString();
+  booking.cancelledBy = req.user.role === 'admin' ? 'admin' : 'client';
+
+  applyRefundWhenCancelled(booking);
+
   writeDb(db);
   res.json(enrichBooking(db, booking));
 });
@@ -460,9 +480,25 @@ app.patch('/api/admin/bookings/:id/status', authenticate, requireAdmin, (req, re
   const db = readDb();
   const booking = db.bookings.find(item => item.id === Number(req.params.id));
   if (!booking) return res.status(404).json({ message: 'Không tìm thấy đơn đặt phòng.' });
-  if (status) booking.status = status;
-  if (paymentStatus) booking.paymentStatus = paymentStatus;
-  booking.updatedAt = new Date().toISOString();
+  if (status) {
+  if (status === 'cancelled' && ['checked-in', 'checked-out'].includes(booking.status)) {
+    return res.status(400).json({ message: 'Đơn đã check-in/check-out nên không thể hủy.' });
+  }
+
+  booking.status = status;
+
+  if (status === 'cancelled') {
+    booking.cancelledAt = new Date().toISOString();
+    booking.cancelledBy = 'admin';
+    applyRefundWhenCancelled(booking);
+  }
+}
+
+if (paymentStatus && booking.paymentStatus !== 'refunded') {
+  booking.paymentStatus = paymentStatus;
+}
+
+booking.updatedAt = new Date().toISOString();
 
   const room = db.rooms.find(item => item.id === booking.roomId);
   if (room) {
