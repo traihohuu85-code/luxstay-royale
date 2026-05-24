@@ -42,7 +42,7 @@ export default function HomePage() {
         <div className="container-lux relative grid min-h-[780px] items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-amber-300/25 bg-amber-300/10 px-4 py-2 text-sm font-black text-amber-100 backdrop-blur-xl"><Crown size={18} fill="currentColor" />Luxury merged edition</div>
-            <h1 className="font-display text-[52px] font-semibold leading-[0.9] tracking-[-0.035em] text-white md:text-[88px]">Trải nghiệm đỉnh cao<br />của sự sang trọng</h1>
+            <h1 className="font-display text-5xl font-bold leading-[1.02] tracking-[-0.04em] text-white md:text-7xl">Trải nghiệm đỉnh cao của sự sang trọng tại LuxStay Royale</h1>
             <p className="mt-4 max-w-xl text-lg text-slate-300">Khám phá bộ sưu tập phòng cao cấp và dịch vụ đẳng cấp thế giới tại LuxStay Royale - điểm đến lý tưởng cho kỳ nghỉ sang trọng của bạn.</p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row"><Link to="/rooms" className="btn-primary">Khám phá phòng <ArrowRight size={18} /></Link><Link to="/branches" className="btn-secondary">Xem cơ sở</Link></div>
             <div className="mt-12 grid max-w-2xl gap-4 sm:grid-cols-3">

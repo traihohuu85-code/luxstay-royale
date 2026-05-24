@@ -4,11 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'Manrope', 'sans-serif'],
-        sans: ['Inter', 'Manrope', 'sans-serif'],
-        display: ['Playfair Display', 'Cormorant Garamond', 'serif'],
-        display: ['"Cormorant Garamond"', 'serif'],
-        sans: ['Manrope', 'sans-serif'],
+        body: ['"Be Vietnam Pro"', 'sans-serif'],
+        sans: ['"Be Vietnam Pro"', 'sans-serif'],
+        display: ['Lora', 'serif'],
       },
       boxShadow: {
         luxury: '0 28px 90px rgba(0, 0, 0, 0.32)',
