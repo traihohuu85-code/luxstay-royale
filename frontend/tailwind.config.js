@@ -6,7 +6,7 @@ export default {
       fontFamily: {
         body: ['"Be Vietnam Pro"', 'sans-serif'],
         sans: ['"Be Vietnam Pro"', 'sans-serif'],
-        display: ['Lora', 'serif'],
+        display: ['"Be Vietnam Pro"', 'sans-serif'],
       },
       boxShadow: {
         luxury: '0 28px 90px rgba(0, 0, 0, 0.32)',
