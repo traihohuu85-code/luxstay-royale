@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="relative border-t border-white/10 py-5 text-center text-sm text-slate-500">© 2026 LuxStay Royale. Merged Premium Edition.</div>
+      <div className="relative border-t border-white/10 py-5 text-center text-sm text-slate-500">© 2026 LuxStay Royale. Designed by Halleyy.</div>
     </footer>
   );
 }
