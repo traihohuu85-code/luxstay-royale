@@ -1,4 +1,4 @@
-import { Crown, MapPin, Phone, Mail, Sparkles } from 'lucide-react';
+import { Crown, MapPin, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -8,7 +8,6 @@ export default function Footer() {
       <div className="container-lux relative grid gap-10 py-14 md:grid-cols-[1.4fr_0.7fr_0.9fr]">
         <div>
           <div className="flex items-center gap-3"><span className="grid h-12 w-12 place-items-center rounded-2xl bg-gold-gradient text-slate-950"><Crown fill="currentColor" /></span><div><p className="font-display text-3xl font-bold">LuxStay Royale</p><p className="text-xs font-black uppercase tracking-[0.35em] text-amber-200">Luxury Hotel Booking</p></div></div>
-          <p className="mt-5 max-w-2xl leading-7 text-slate-400">Website đặt phòng khách sạn đa cơ sở được gộp từ hai phiên bản: giữ backend đầy đủ, nâng cấp giao diện luxury, tối ưu trải nghiệm đặt phòng và quản trị cho bài tập lớn Công nghệ Web.</p>
           <div className="mt-6 flex flex-wrap gap-3 text-sm text-slate-300"><span className="pill-lux"><Sparkles size={14} />React</span><span className="pill-lux">Tailwind</span><span className="pill-lux">Express API</span></div>
         </div>
         <div>
