@@ -41,7 +41,7 @@ export default function HomePage() {
         </div>
         <div className="container-lux relative grid min-h-[780px] items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
-            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-amber-300/25 bg-amber-300/10 px-4 py-2 text-sm font-black text-amber-100 backdrop-blur-xl"><Crown size={18} fill="currentColor" />Luxury merged edition</div>
+            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-amber-300/25 bg-amber-300/10 px-4 py-2 text-sm font-black text-amber-100 backdrop-blur-xl"><Crown size={18} fill="currentColor" />Thý cute nhưng ngơ :3</div>
             <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-7xl">Trải nghiệm đặt phòng khách sạn sang trọng, mượt mà và tinh tế.</h1>            
             <div className="mt-9 flex flex-col gap-4 sm:flex-row"><Link to="/rooms" className="btn-primary">Khám phá phòng <ArrowRight size={18} /></Link><Link to="/branches" className="btn-secondary">Xem cơ sở</Link></div>
             <div className="mt-12 grid max-w-2xl gap-4 sm:grid-cols-3">
