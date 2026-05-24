@@ -9,8 +9,7 @@ export default function BranchesPage() {
     <div className="container-lux py-14">
       <div className="glass-panel mb-10 overflow-hidden p-8 md:p-10">
         <p className="section-kicker">Hệ thống cơ sở</p>
-        <h1 className="section-title mt-3">Các chi nhánh LuxStay Royale</h1>
-        <p className="mt-4 max-w-3xl text-slate-400">Mỗi cơ sở có danh sách phòng, giá và bộ lọc riêng. Logic đa cơ sở được dùng xuyên suốt từ client đến admin.</p>
+        <h1 className="section-title mt-3">Các chi nhánh LuxStay Royale</h1>        
       </div>
       <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">{branches.map((branch) => <BranchCard key={branch.id} branch={branch} />)}</div>
     </div>
